@@ -114,6 +114,104 @@ body {
     color: white;
 }
 
+/*responsive nav*/
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    display: block;
+    margin: 7px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-active {
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+}
+  
+.hamburger-active .line:nth-child(2) {
+    width: 0px;
+}
+  
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+    transition-delay: 0.3s;
+}
+  
+.hamburger-active .line:nth-child(1) {
+    transform: translateY(12px);
+}
+  
+.hamburger-active .line:nth-child(3) {
+    transform: translateY(-5px) rotate(90deg);
+}
+  
+.menubar {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: 100vh;
+    padding: 10% 0;
+    background: rgb(255, 255, 255);
+    transition: all 0.5s ease-in;
+    z-index: 2;
+}
+
+.active {
+    left: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+  
+.menubar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.menubar ul li {
+    margin-bottom: 32px;
+}
+  
+.menubar ul li a {
+    color: var(--gray);
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+.menubar ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.menubar .btn {
+    color: white;
+    padding: 12px 24px;
+}
+
+.menubar .btn:hover {
+    background-color: #0606bf;
+    color: white;
+}
+
+.menubar .btn-login {
+    color: var(--primary-color);
+    background-color: #FFF;
+}
+
+.menubar .btn-login:hover {
+    color: white;
+    background-color: #0606bf;
+}
+
 /* akhir navbar */
 
 /* main */
@@ -458,6 +556,14 @@ main aside .social-media li a:hover {
 
     main aside .social-media ul {
         gap: .5rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .container-header .nav-list,
+    .container-header .auth-list {
+        display: none;
     }
 
 }
