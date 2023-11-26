@@ -417,9 +417,10 @@ main aside .social-media {
    
 main aside .social-media ul {
     padding: 1.5rem 1rem;
-    margin: auto 30px;
-    border-radius: 12px;
-    background-color: rgba(213, 216, 238, 0.748);
+    margin: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: var(--primary-color);
     backdrop-filter: blur(6px);
    
     display: flex;
@@ -436,12 +437,12 @@ main aside .social-media li {
 main aside .social-media li a {
     text-decoration: none;
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: white;
     transition: all .1s ease-in-out;
 }
  
 main aside .social-media li a:hover {
-    color: #3d3ded;
+    color: #8f8fe3;
     
 }
 /* end aside  */
